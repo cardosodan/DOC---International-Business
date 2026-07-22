@@ -140,6 +140,101 @@
         </g>
       </svg>
 
+      <!-- Ilustração original de skyline portuário + guindastes + contêineres +
+           navio cargueiro — no lugar de foto de banco de imagens (sem direito
+           de uso garantido). Se um dia vocês tiverem uma foto real de porto/
+           avião de carga, é só me passar que eu troco por ela, do mesmo jeito
+           que fiz com a logo. Puramente decorativo (aria-hidden). -->
+      <svg class="hero__horizonte" viewBox="0 0 1600 300" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+        <defs>
+          <linearGradient id="aguaGradiente" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="var(--cor-primaria)" stop-opacity="0.5" />
+            <stop offset="1" stop-color="var(--cor-noturna)" stop-opacity="0.95" />
+          </linearGradient>
+        </defs>
+
+        <!-- água / doca, com reflexos bem discretos -->
+        <rect x="0" y="256" width="1600" height="44" fill="url(#aguaGradiente)" />
+        <line x1="0" y1="267" x2="1600" y2="267" stroke="rgba(255,255,255,0.06)" stroke-width="1" />
+        <line x1="0" y1="277" x2="1600" y2="277" stroke="rgba(255,255,255,0.045)" stroke-width="1" />
+        <line x1="0" y1="287" x2="1600" y2="287" stroke="rgba(255,255,255,0.03)" stroke-width="1" />
+
+        <!-- skyline distante (mais clara, sensação de neblina/distância) -->
+        <g fill="var(--cor-noturna-clara)">
+          <rect x="-20" y="208" width="45" height="52" /><rect x="32" y="151" width="34" height="109" />
+          <rect x="77" y="203" width="52" height="57" /><rect x="137" y="193" width="29" height="67" />
+          <rect x="175" y="194" width="29" height="66" /><rect x="214" y="192" width="43" height="68" />
+          <rect x="267" y="209" width="50" height="51" /><rect x="329" y="183" width="47" height="77" />
+          <rect x="1065" y="143" width="46" height="117" /><rect x="1124" y="207" width="34" height="53" />
+          <rect x="1165" y="193" width="35" height="67" /><rect x="1214" y="185" width="52" height="75" />
+          <rect x="1276" y="137" width="39" height="123" /><rect x="1323" y="190" width="35" height="70" />
+          <rect x="1368" y="163" width="35" height="97" /><rect x="1416" y="192" width="39" height="68" />
+          <rect x="1469" y="203" width="42" height="57" /><rect x="1515" y="160" width="31" height="100" />
+          <rect x="1558" y="205" width="39" height="55" /><rect x="1605" y="168" width="55" height="92" />
+        </g>
+
+        <!-- skyline próxima (mais definida/escura), concentrada à esquerda pra
+             abrir espaço pros guindastes e navio à direita -->
+        <g fill="var(--cor-grafite-clara)">
+          <rect x="-20" y="189" width="65" height="71" /><rect x="58" y="120" width="59" height="140" />
+          <rect x="125" y="175" width="57" height="85" /><rect x="193" y="66" width="50" height="194" />
+          <rect x="258" y="125" width="43" height="135" /><rect x="309" y="77" width="67" height="183" />
+          <rect x="385" y="111" width="57" height="149" /><rect x="450" y="120" width="61" height="140" />
+          <rect x="525" y="190" width="53" height="70" /><rect x="587" y="69" width="35" height="191" />
+          <rect x="637" y="150" width="64" height="110" /><rect x="707" y="67" width="66" height="193" />
+          <rect x="780" y="181" width="51" height="79" /><rect x="845" y="173" width="62" height="87" />
+        </g>
+
+        <!-- luzinhas de janela, esparsas -->
+        <g fill="var(--cor-dourado)" opacity="0.55">
+          <circle cx="210" cy="100" r="1.6" /><circle cx="325" cy="140" r="1.6" /><circle cx="400" cy="160" r="1.6" />
+          <circle cx="470" cy="180" r="1.6" /><circle cx="600" cy="110" r="1.6" /><circle cx="655" cy="200" r="1.6" />
+          <circle cx="730" cy="120" r="1.6" /><circle cx="860" cy="210" r="1.6" /><circle cx="1080" cy="180" r="1.6" />
+          <circle cx="1290" cy="170" r="1.6" /><circle cx="1420" cy="220" r="1.6" />
+        </g>
+
+        <!-- navio cargueiro -->
+        <g>
+          <path d="M170 260 L200 226 L410 226 L432 260 Z" fill="var(--cor-grafite-clara)" />
+          <rect x="222" y="196" width="26" height="30" fill="var(--cor-grafite-clara)" />
+          <rect x="252" y="204" width="26" height="22" fill="var(--cor-dourado)" opacity="0.65" />
+          <rect x="282" y="196" width="26" height="30" fill="var(--cor-grafite-clara)" />
+          <rect x="312" y="204" width="26" height="22" fill="var(--cor-dourado)" opacity="0.5" />
+          <rect x="342" y="196" width="26" height="30" fill="var(--cor-grafite-clara)" />
+          <rect x="200" y="178" width="16" height="18" fill="var(--cor-grafite-clara)" />
+          <circle cx="208" cy="184" r="1.4" fill="var(--cor-dourado)" opacity="0.7" />
+        </g>
+
+        <!-- guindastes de porto (pórtico) — posicionados mais ao centro
+             (não coladas na borda) porque o preserveAspectRatio="slice" pode
+             cortar as pontas em telas com proporção diferente de 1600x300 -->
+        <g stroke="var(--cor-dourado)" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.85">
+          <path d="M1030 260 L1030 100 M1030 100 L1160 100 M1030 100 L990 150 M1045 130 L1010 130" />
+          <path d="M1140 90 L1140 60 M1140 60 L1080 60 M1140 60 L1180 100" />
+          <line x1="1100" y1="100" x2="1100" y2="130" stroke-width="2" />
+          <rect x="1092" y="130" width="16" height="10" fill="var(--cor-dourado)" stroke="none" opacity="0.8" />
+
+          <path d="M1250 260 L1250 130 M1250 130 L1350 130 M1250 130 L1220 165" />
+          <line x1="1310" y1="130" x2="1310" y2="152" stroke-width="1.8" />
+          <rect x="1303" y="152" width="14" height="8" fill="var(--cor-dourado)" stroke="none" opacity="0.75" />
+        </g>
+
+        <!-- pátio de contêineres -->
+        <g>
+          <rect x="1180" y="228" width="34" height="20" fill="var(--cor-grafite-clara)" />
+          <rect x="1216" y="228" width="34" height="20" fill="var(--cor-dourado)" opacity="0.45" />
+          <rect x="1180" y="206" width="34" height="20" fill="var(--cor-dourado)" opacity="0.35" />
+          <rect x="1216" y="206" width="34" height="20" fill="var(--cor-grafite-clara)" />
+          <rect x="1252" y="228" width="34" height="20" fill="var(--cor-grafite-clara)" />
+          <rect x="1288" y="228" width="30" height="20" fill="var(--cor-grafite-clara)" />
+          <rect x="1252" y="206" width="34" height="20" fill="var(--cor-dourado)" opacity="0.3" />
+        </g>
+      </svg>
+
+      <!-- Overlay escuro por cima da ilustração — garante contraste do texto
+           independente do que estiver desenhado atrás (prédios, guindastes). -->
+      <div class="hero__overlay" aria-hidden="true"></div>
+
       <div class="container hero__grade">
         <div class="hero__conteudo reveal">
           <p class="hero__eyebrow">Consultoria &amp; Assessoria Internacional</p>
@@ -291,9 +386,9 @@
          cada .mercados__grupo. Cada item usa o emoji de bandeira do país —
          funciona em qualquer navegador moderno, sem precisar de imagens.
          ========================================================================== -->
-    <section class="secao secao--alt mercados" id="mercados">
+    <section class="secao secao--escura mercados" id="mercados">
       <svg class="mercados__fundo" viewBox="0 0 1200 500" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
-        <g stroke="var(--cor-primaria)" stroke-width="1">
+        <g stroke="rgba(255,255,255,0.18)" stroke-width="1">
           <line x1="80" y1="90" x2="260" y2="180" />
           <line x1="260" y1="180" x2="220" y2="340" />
           <line x1="260" y1="180" x2="460" y2="120" />
@@ -422,31 +517,116 @@
         </div>
 
         <div class="painel-servicos" id="painel-importacao" role="tabpanel" aria-labelledby="aba-importacao">
-          <ul class="servicos__lista">
-            <li class="servico-item"><span class="servico-item__icone" aria-hidden="true">✓</span>Desenvolvimento de produtos e fornecedores</li>
-            <li class="servico-item"><span class="servico-item__icone" aria-hidden="true">✓</span>Análise comercial de viabilidade</li>
-            <li class="servico-item"><span class="servico-item__icone" aria-hidden="true">✓</span>Planilha de custos estimados de importação</li>
-            <li class="servico-item"><span class="servico-item__icone" aria-hidden="true">✓</span>Análise documental</li>
-            <li class="servico-item"><span class="servico-item__icone" aria-hidden="true">✓</span>Preparação de desembaraço/despacho aduaneiro</li>
-            <li class="servico-item"><span class="servico-item__icone" aria-hidden="true">✓</span>Classificação tarifária (NCM)</li>
-            <li class="servico-item"><span class="servico-item__icone" aria-hidden="true">✓</span>Soluções cambiais junto ao Bacen</li>
-            <li class="servico-item"><span class="servico-item__icone" aria-hidden="true">✓</span>Benefícios fiscais (ICMS, ZFM)</li>
-            <li class="servico-item"><span class="servico-item__icone" aria-hidden="true">✓</span>Padronização de embalagens</li>
-            <li class="servico-item"><span class="servico-item__icone" aria-hidden="true">✓</span>Projetos especiais e créditos tributários</li>
-          </ul>
+          <div class="servicos__grade">
+            <article class="servico-card reveal">
+              <span class="servico-card__icone" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="10" cy="10" r="6.5" /><line x1="14.8" y1="14.8" x2="20" y2="20" />
+                  <path d="M7 11.5l2-3 2 2 3.3-4.2" />
+                </svg>
+              </span>
+              <h3>Desenvolvimento &amp; viabilidade</h3>
+              <ul>
+                <li>Desenvolvimento de produtos e fornecedores</li>
+                <li>Análise comercial de viabilidade</li>
+                <li>Planilha de custos estimados de importação</li>
+              </ul>
+            </article>
+            <article class="servico-card reveal">
+              <span class="servico-card__icone" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M6 3h9l4 4v14a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1Z" /><path d="M15 3v4h4" />
+                  <path d="M8.3 13.3l2 2 4.2-4.6" />
+                </svg>
+              </span>
+              <h3>Documentação &amp; aduaneiro</h3>
+              <ul>
+                <li>Análise documental</li>
+                <li>Preparação de desembaraço/despacho aduaneiro</li>
+                <li>Classificação tarifária (NCM)</li>
+              </ul>
+            </article>
+            <article class="servico-card reveal">
+              <span class="servico-card__icone" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M7 7h10l-3.2-3.2M17 7l-3.2 3.2" /><path d="M17 17H7l3.2 3.2M7 17l3.2-3.2" />
+                </svg>
+              </span>
+              <h3>Câmbio &amp; benefícios fiscais</h3>
+              <ul>
+                <li>Soluções cambiais junto ao Bacen</li>
+                <li>Benefícios fiscais (ICMS, ZFM)</li>
+              </ul>
+            </article>
+            <article class="servico-card reveal">
+              <span class="servico-card__icone" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M3 8l9-5 9 5-9 5-9-5Z" /><path d="M3 8v9l9 5 9-5V8" /><path d="M12 13v9" />
+                </svg>
+              </span>
+              <h3>Projetos especiais</h3>
+              <ul>
+                <li>Padronização de embalagens</li>
+                <li>Projetos especiais e créditos tributários</li>
+              </ul>
+            </article>
+          </div>
         </div>
 
         <div class="painel-servicos" id="painel-exportacao" role="tabpanel" aria-labelledby="aba-exportacao" hidden>
-          <ul class="servicos__lista">
-            <li class="servico-item"><span class="servico-item__icone" aria-hidden="true">✓</span>Desenvolvimento de novos mercados e clientes</li>
-            <li class="servico-item"><span class="servico-item__icone" aria-hidden="true">✓</span>Projetos e parcerias comerciais/industriais</li>
-            <li class="servico-item"><span class="servico-item__icone" aria-hidden="true">✓</span>Apresentação de produtos</li>
-            <li class="servico-item"><span class="servico-item__icone" aria-hidden="true">✓</span>Formação de custo de exportação</li>
-            <li class="servico-item"><span class="servico-item__icone" aria-hidden="true">✓</span>Classificação tarifária</li>
-            <li class="servico-item"><span class="servico-item__icone" aria-hidden="true">✓</span>Desembaraço aduaneiro</li>
-            <li class="servico-item"><span class="servico-item__icone" aria-hidden="true">✓</span>Laudos técnicos</li>
-            <li class="servico-item"><span class="servico-item__icone" aria-hidden="true">✓</span>Benefícios fiscais para exportação</li>
-          </ul>
+          <div class="servicos__grade">
+            <article class="servico-card reveal">
+              <span class="servico-card__icone" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="9" /><circle cx="12" cy="12" r="5" />
+                  <circle cx="12" cy="12" r="1.2" fill="currentColor" stroke="none" />
+                </svg>
+              </span>
+              <h3>Desenvolvimento de mercado</h3>
+              <ul>
+                <li>Desenvolvimento de novos mercados e clientes</li>
+                <li>Projetos e parcerias comerciais/industriais</li>
+                <li>Apresentação de produtos</li>
+              </ul>
+            </article>
+            <article class="servico-card reveal">
+              <span class="servico-card__icone" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 3h6a2 2 0 0 1 2 2v6l-9 9a2 2 0 0 1-2.8 0l-5.2-5.2a2 2 0 0 1 0-2.8l9-9Z" />
+                  <circle cx="15.5" cy="8.5" r="1.3" fill="currentColor" stroke="none" />
+                </svg>
+              </span>
+              <h3>Formação de preço &amp; tarifas</h3>
+              <ul>
+                <li>Formação de custo de exportação</li>
+                <li>Classificação tarifária</li>
+              </ul>
+            </article>
+            <article class="servico-card reveal">
+              <span class="servico-card__icone" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M6 3h9l4 4v10a1 1 0 0 1-1 1h-4" /><path d="M15 3v4h4" />
+                  <circle cx="8.5" cy="16" r="3" /><path d="M6.7 18.5 6 22l2.5-1.4L11 22l-.7-3.5" />
+                </svg>
+              </span>
+              <h3>Desembaraço &amp; conformidade</h3>
+              <ul>
+                <li>Desembaraço aduaneiro</li>
+                <li>Laudos técnicos</li>
+              </ul>
+            </article>
+            <article class="servico-card reveal">
+              <span class="servico-card__icone" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="7" cy="7" r="2.2" /><circle cx="17" cy="17" r="2.2" /><line x1="18" y1="6" x2="6" y2="18" />
+                </svg>
+              </span>
+              <h3>Benefícios fiscais</h3>
+              <ul>
+                <li>Benefícios fiscais para exportação</li>
+              </ul>
+            </article>
+          </div>
         </div>
       </div>
     </section>
