@@ -265,58 +265,25 @@
               </svg>
             </a>
           </div>
-
-          <!-- Estatísticas rápidas — números reais (não depoimentos/clientes fictícios) -->
-          <dl class="hero__estatisticas">
-            <div class="estatistica">
-              <dt class="estatistica__numero" data-contador="30" data-sufixo="+">0</dt>
-              <dd class="estatistica__legenda">Mercados internacionais</dd>
-            </div>
-            <div class="estatistica">
-              <dt class="estatistica__numero" data-contador="5">0</dt>
-              <dd class="estatistica__legenda">Continentes atendidos</dd>
-            </div>
-            <div class="estatistica">
-              <dt class="estatistica__numero" data-contador="18" data-sufixo="+">0</dt>
-              <dd class="estatistica__legenda">Serviços especializados</dd>
-            </div>
-          </dl>
         </div>
 
-        <!-- Painel gráfico: rotas do Brasil até 4 mercados representativos
-             (um por região) — ilustra a proposta do título ("conectamos o
-             Brasil aos mercados") em vez de um efeito de "rede" genérico e
-             sem relação direta com comércio exterior. Escondido no mobile
-             (ver CSS) pra não ocupar espaço que a tela pequena não tem. -->
-        <div class="hero__painel reveal" aria-hidden="true">
-          <svg class="hero__painel-rotas" viewBox="0 0 400 400" fill="none">
-            <path d="M80 328 Q140 220 200 152" stroke="rgba(255,255,255,0.45)" stroke-width="1.5" stroke-dasharray="5 6" />
-            <path d="M80 328 Q220 290 304 232" stroke="rgba(255,255,255,0.45)" stroke-width="1.5" stroke-dasharray="5 6" />
-            <path d="M80 328 Q90 200 112 88" stroke="rgba(255,255,255,0.45)" stroke-width="1.5" stroke-dasharray="5 6" />
-            <path d="M80 328 Q220 330 312 320" stroke="rgba(255,255,255,0.45)" stroke-width="1.5" stroke-dasharray="5 6" />
-          </svg>
-
-          <div class="hero__painel-origem">
-            <span>BRASIL</span>
+        <!-- Estatísticas em destaque — tipografia grande "flutuando" sobre a
+           ilustração de fundo, sem nenhum card/quadro em volta (no lugar do
+           painel de rotas anterior, que ficou com cara de "caixa" solta). -->
+        <dl class="hero__estatisticas-destaque reveal">
+          <div class="estatistica-grande">
+            <dt class="estatistica__numero" data-contador="30" data-sufixo="+">0</dt>
+            <dd>Mercados internacionais</dd>
           </div>
-
-          <div class="hero__painel-destino hero__painel-destino--1">
-            <img src="images/flags/cn.svg" alt="" width="26" height="20" />
-            <span>Ásia</span>
+          <div class="estatistica-grande">
+            <dt class="estatistica__numero" data-contador="5">0</dt>
+            <dd>Continentes atendidos</dd>
           </div>
-          <div class="hero__painel-destino hero__painel-destino--2">
-            <img src="images/flags/ae.svg" alt="" width="26" height="20" />
-            <span>Oriente Médio</span>
+          <div class="estatistica-grande">
+            <dt class="estatistica__numero" data-contador="18" data-sufixo="+">0</dt>
+            <dd>Serviços especializados</dd>
           </div>
-          <div class="hero__painel-destino hero__painel-destino--3">
-            <img src="images/flags/de.svg" alt="" width="26" height="20" />
-            <span>Europa</span>
-          </div>
-          <div class="hero__painel-destino hero__painel-destino--4">
-            <img src="images/flags/us.svg" alt="" width="26" height="20" />
-            <span>Américas</span>
-          </div>
-        </div>
+        </dl>
       </div>
     </section>
 
