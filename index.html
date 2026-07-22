@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ==========================================================================
+       SEO — título e descrição são o que aparece no resultado do Google e no
+       preview de WhatsApp/LinkedIn. TROQUE a URL (og:url/canonical) assim que
+       o domínio definitivo estiver no ar.
+       ========================================================================== -->
+  <title>DOC International Business | Consultoria e Assessoria em Comércio Exterior</title>
+  <meta
+    name="description"
+    content="Consultoria e assessoria internacional em importação, exportação e outsourcing de comércio exterior. Conectamos empresas brasileiras a mais de 30 mercados em 5 continentes."
+  />
+  <meta
+    name="keywords"
+    content="comércio exterior, importação, exportação, consultoria internacional, outsourcing comex, despacho aduaneiro, Manaus, Zona Franca de Manaus"
+  />
+  <meta name="author" content="DOC International Business Ltda." />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#0f2c6b" />
+  <!-- TROCAR pelo domínio definitivo quando publicar -->
+  <link rel="canonical" href="https://www.docworldbusiness.com/" />
+
+  <!-- Open Graph / preview de compartilhamento (WhatsApp, LinkedIn, etc.) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="DOC International Business | Consultoria e Assessoria em Comércio Exterior" />
+  <meta
+    property="og:description"
+    content="Conectamos empresas brasileiras aos principais mercados do mundo: importação, exportação e outsourcing completo de operações internacionais."
+  />
+  <meta property="og:image" content="images/og-image.jpg" />
+  <meta property="og:url" content="https://www.docworldbusiness.com/" />
+  <meta property="og:locale" content="pt_BR" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Favicon: recortado da logo real (images/logo-marca.png) -->
+  <link rel="icon" type="image/png" sizes="192x192" href="images/favicon.png" />
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
+
+  <!-- Google Fonts — Montserrat (títulos, peso forte) + Inter (corpo de texto).
+       Para trocar, troque o link abaixo E as variáveis --fonte-titulo/--fonte-corpo
+       em css/style.css (topo do arquivo). -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- Link de acessibilidade: permite pular o menu usando o teclado (Tab) -->
+  <a class="pular-conteudo" href="#conteudo-principal">Pular para o conteúdo</a>
+
+  <!-- ==========================================================================
+       CABEÇALHO / MENU
+       TROCAR: número de WhatsApp (já preenchido com o contato real do
+       diretor comercial — troque somente se mudar o canal oficial).
+       ========================================================================== -->
+  <header class="cabecalho" id="cabecalho">
+    <div class="container cabecalho__conteudo">
+      <a href="#inicio" class="marca">
+        <img class="marca__icone" src="images/logo-marca.png" alt="" width="34" height="39" />
+        <span class="marca__texto">
+          <strong>DOC</strong>
+          <em>International Business</em>
+        </span>
+      </a>
+
+      <nav class="navegacao" id="navegacao" aria-label="Navegação principal">
+        <ul class="navegacao__lista">
+          <li><a href="#inicio" class="navegacao__link">Início</a></li>
+          <li><a href="#sobre" class="navegacao__link">Sobre</a></li>
+          <li><a href="#mercados" class="navegacao__link">Mercados</a></li>
+          <li><a href="#servicos" class="navegacao__link">Serviços</a></li>
+          <li><a href="#logistica" class="navegacao__link">Logística</a></li>
+          <li><a href="#outsourcing" class="navegacao__link">Outsourcing</a></li>
+          <li><a href="#contato" class="navegacao__link">Contato</a></li>
+        </ul>
+        <!-- TROCAR: número no formato 55DDNÚMERO (só dígitos) se o canal mudar -->
+        <a
+          href="https://wa.me/5592982460567?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20DOC%20International%20Business%20e%20gostaria%20de%20falar%20com%20um%20consultor."
+          target="_blank"
+          rel="noopener"
+          class="botao botao--primario navegacao__cta"
+        >
+          Fale com um consultor
+        </a>
+      </nav>
+
+      <button
+        class="menu-mobile"
+        id="botaoMenuMobile"
+        aria-label="Abrir menu"
+        aria-expanded="false"
+        aria-controls="navegacao"
+      >
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="conteudo-principal">
+    <!-- ==========================================================================
+         HERO / INÍCIO
+         Fundo 100% gráfico (gradiente + rede de pontos/linhas simbolizando
+         conexão internacional) — sem depender de foto de banco de imagens.
+         ========================================================================== -->
+    <section class="hero" id="inicio">
+      <!-- Rede decorativa de pontos/linhas — puramente ilustrativo (aria-hidden) -->
+      <svg class="hero__rede" viewBox="0 0 1200 800" preserveAspectRatio="xMaxYMid slice" aria-hidden="true">
+        <g class="hero__rede-linhas" stroke="#ffffff" stroke-width="1">
+          <line x1="760" y1="120" x2="920" y2="230" />
+          <line x1="920" y1="230" x2="880" y2="400" />
+          <line x1="920" y1="230" x2="1080" y2="180" />
+          <line x1="880" y1="400" x2="1020" y2="480" />
+          <line x1="1020" y1="480" x2="1080" y2="180" />
+          <line x1="1080" y1="180" x2="1150" y2="340" />
+          <line x1="1020" y1="480" x2="960" y2="620" />
+          <line x1="880" y1="400" x2="760" y2="480" />
+          <line x1="760" y1="480" x2="820" y2="640" />
+          <line x1="1150" y1="340" x2="1120" y2="520" />
+          <line x1="1120" y1="520" x2="1020" y2="480" />
+        </g>
+        <g class="hero__rede-pontos" fill="var(--cor-dourado)">
+          <circle cx="760" cy="120" r="4" />
+          <circle cx="920" cy="230" r="5" />
+          <circle cx="1080" cy="180" r="4" />
+          <circle cx="880" cy="400" r="4.5" />
+          <circle cx="1020" cy="480" r="4" />
+          <circle cx="1150" cy="340" r="4" />
+          <circle cx="960" cy="620" r="4" />
+          <circle cx="760" cy="480" r="4" />
+          <circle cx="820" cy="640" r="4" />
+          <circle cx="1120" cy="520" r="4" />
+        </g>
+      </svg>
+
+      <div class="container hero__grade">
+        <div class="hero__conteudo reveal">
+          <p class="hero__eyebrow">Consultoria &amp; Assessoria Internacional</p>
+          <h1 class="hero__titulo">Conectamos o Brasil aos principais mercados do mundo</h1>
+          <p class="hero__frase">
+            Assessoria completa em importação, exportação e outsourcing de operações
+            internacionais — para empresas que querem competir no mercado global com
+            segurança, custo-benefício e presença em mais de 30 países.
+          </p>
+          <div class="hero__acoes">
+            <a
+              href="https://wa.me/5592982460567?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20DOC%20International%20Business%20e%20gostaria%20de%20falar%20com%20um%20consultor."
+              target="_blank"
+              rel="noopener"
+              class="botao botao--primario botao--grande"
+            >
+              <svg class="icone" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path
+                  d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm5.7 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.1.1-1.8-.1-.4-.1-.9-.3-1.6-.6-2.8-1.2-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8 0-1.3.7-2 1-2.2.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.4.2.5.7 1.8.8 1.9.1.2.1.3 0 .5-.1.2-.1.3-.3.5l-.4.5c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.3.1.5.1.6-.1.2-.2.7-.8.9-1.1.2-.3.4-.2.6-.1.2.1 1.5.7 1.8.8.3.1.5.2.5.3.1.2.1.6-.1 1.2Z"
+                />
+              </svg>
+              Fale com um consultor
+            </a>
+            <a href="#mercados" class="botao botao--fantasma botao--grande">Ver mercados de atuação</a>
+          </div>
+        </div>
+
+        <!-- Painel gráfico com a rede internacional + estatísticas "flutuantes" —
+             composição própria (não é foto nem texto simples sobre gradiente). -->
+        <div class="hero__painel reveal" aria-hidden="true">
+          <svg class="hero__painel-rede" viewBox="0 0 400 400">
+            <g stroke="rgba(255,255,255,0.35)" stroke-width="1">
+              <line x1="120" y1="90" x2="230" y2="150" />
+              <line x1="230" y1="150" x2="200" y2="260" />
+              <line x1="230" y1="150" x2="320" y2="120" />
+              <line x1="200" y1="260" x2="290" y2="300" />
+              <line x1="290" y1="300" x2="320" y2="120" />
+              <line x1="120" y1="90" x2="90" y2="220" />
+              <line x1="90" y1="220" x2="200" y2="260" />
+            </g>
+            <g fill="var(--cor-dourado)">
+              <circle cx="120" cy="90" r="5" />
+              <circle cx="230" cy="150" r="6" />
+              <circle cx="320" cy="120" r="5" />
+              <circle cx="200" cy="260" r="5.5" />
+              <circle cx="290" cy="300" r="5" />
+              <circle cx="90" cy="220" r="5" />
+            </g>
+          </svg>
+          <div class="hero__chip hero__chip--1">
+            <strong class="estatistica__numero" data-contador="30" data-sufixo="+">0</strong>
+            <span>Mercados</span>
+          </div>
+          <div class="hero__chip hero__chip--2">
+            <strong class="estatistica__numero" data-contador="5">0</strong>
+            <span>Continentes</span>
+          </div>
+          <div class="hero__chip hero__chip--3">
+            <strong class="estatistica__numero" data-contador="18" data-sufixo="+">0</strong>
+            <span>Serviços</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SOBRE — Consultoria & Assessoria Internacional
+         TROCAR: apenas se o posicionamento institucional mudar.
+         ========================================================================== -->
+    <section class="secao sobre" id="sobre">
+      <img class="sobre__marca-dagua" src="images/logo-marca.png" alt="" aria-hidden="true" />
+      <div class="container secao__grade sobre__grade">
+        <div class="sobre__texto reveal">
+          <p class="secao__eyebrow">Sobre a DOC International Business</p>
+          <h2 class="secao__titulo">Intercâmbio comercial entre o Brasil e o mundo</h2>
+          <p>
+            A DOC International Business atua no intercâmbio comercial entre o Brasil e
+            outros países, oferecendo consultoria e assessoria completa em comércio
+            exterior. Nosso foco é o desenvolvimento das empresas clientes — buscando
+            sempre o melhor custo-benefício em operações de importação e exportação.
+          </p>
+          <p>
+            Mais do que executar processos, trabalhamos no desenvolvimento de mercado:
+            identificamos fornecedores e compradores estratégicos, estruturamos as
+            operações internacionais do zero e deixamos nossos clientes mais
+            competitivos diante do cenário global.
+          </p>
+
+          <ul class="sobre__diferenciais">
+            <li>
+              <span class="sobre__diferenciais-icone" aria-hidden="true">◆</span>
+              <div>
+                <strong>Melhor custo-benefício</strong>
+                <span>Análises comerciais e cambiais que reduzem o custo real de cada operação.</span>
+              </div>
+            </li>
+            <li>
+              <span class="sobre__diferenciais-icone" aria-hidden="true">◆</span>
+              <div>
+                <strong>Desenvolvimento de mercado</strong>
+                <span>Prospecção de fornecedores, clientes e parcerias em mais de 30 países.</span>
+              </div>
+            </li>
+            <li>
+              <span class="sobre__diferenciais-icone" aria-hidden="true">◆</span>
+              <div>
+                <strong>Competitividade internacional</strong>
+                <span>Estrutura fiscal, aduaneira e logística pensada para o seu setor.</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Card editorial (citação em destaque) — sem depender de ícone ou foto -->
+        <div class="sobre__selo reveal">
+          <span class="sobre__selo-aspas" aria-hidden="true">&ldquo;</span>
+          <p class="sobre__selo-frase">
+            Da Amazônia para o mundo — presença direta em mais de 30 mercados,
+            em cinco continentes.
+          </p>
+          <span class="sobre__selo-assinatura">DOC International Business</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         MERCADOS DE ATUAÇÃO
+         TROCAR: adicione/remova países alterando os itens .pais dentro de
+         cada .mercados__grupo. Cada item usa o emoji de bandeira do país —
+         funciona em qualquer navegador moderno, sem precisar de imagens.
+         ========================================================================== -->
+    <section class="secao secao--alt mercados" id="mercados">
+      <svg class="mercados__fundo" viewBox="0 0 1200 500" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+        <g stroke="var(--cor-primaria)" stroke-width="1">
+          <line x1="80" y1="90" x2="260" y2="180" />
+          <line x1="260" y1="180" x2="220" y2="340" />
+          <line x1="260" y1="180" x2="460" y2="120" />
+          <line x1="460" y1="120" x2="620" y2="220" />
+          <line x1="620" y1="220" x2="800" y2="140" />
+          <line x1="800" y1="140" x2="980" y2="230" />
+          <line x1="980" y1="230" x2="1120" y2="150" />
+          <line x1="620" y1="220" x2="700" y2="380" />
+          <line x1="220" y1="340" x2="420" y2="400" />
+          <line x1="420" y1="400" x2="700" y2="380" />
+          <line x1="700" y1="380" x2="900" y2="410" />
+          <line x1="900" y1="410" x2="1100" y2="360" />
+        </g>
+        <g fill="var(--cor-dourado)">
+          <circle cx="80" cy="90" r="3.5" /><circle cx="260" cy="180" r="3.5" />
+          <circle cx="220" cy="340" r="3.5" /><circle cx="460" cy="120" r="3.5" />
+          <circle cx="620" cy="220" r="3.5" /><circle cx="800" cy="140" r="3.5" />
+          <circle cx="980" cy="230" r="3.5" /><circle cx="1120" cy="150" r="3.5" />
+          <circle cx="700" cy="380" r="3.5" /><circle cx="420" cy="400" r="3.5" />
+          <circle cx="900" cy="410" r="3.5" /><circle cx="1100" cy="360" r="3.5" />
+        </g>
+      </svg>
+
+      <div class="container">
+        <div class="secao__cabecalho reveal">
+          <p class="secao__eyebrow">Presença global</p>
+          <h2 class="secao__titulo">Mercados de atuação</h2>
+          <p class="secao__subtitulo">
+            Atuação direta em mais de 30 mercados, em cinco continentes — do
+            desenvolvimento de fornecedores na Ásia à abertura de clientes na Europa
+            e nas Américas.
+          </p>
+        </div>
+
+        <!-- 4 grupos com contagem equilibrada (7/7/8/8 países) de propósito —
+             evita o problema de um card quase vazio ao lado de outro lotado
+             (era o caso de "Oriente Médio & África", só 2 países, esticado
+             pra mesma altura de "Américas", com 7). -->
+        <div class="mercados__grade">
+          <div class="mercados__grupo reveal">
+            <h3 class="mercados__grupo-titulo">Ásia-Pacífico, Oriente Médio &amp; África</h3>
+            <ul class="mercados__lista mercados__lista--compacta">
+              <li class="pais"><img class="pais__bandeira" src="images/flags/cn.svg" alt="" width="28" height="21" loading="lazy" /><span class="pais__nome">China</span></li>
+              <li class="pais"><img class="pais__bandeira" src="images/flags/kr.svg" alt="" width="28" height="21" loading="lazy" /><span class="pais__nome">Coreia do Sul</span></li>
+              <li class="pais"><img class="pais__bandeira" src="images/flags/my.svg" alt="" width="28" height="21" loading="lazy" /><span class="pais__nome">Malásia</span></li>
+              <li class="pais"><img class="pais__bandeira" src="images/flags/in.svg" alt="" width="28" height="21" loading="lazy" /><span class="pais__nome">Índia</span></li>
+              <li class="pais"><img class="pais__bandeira" src="images/flags/au.svg" alt="" width="28" height="21" loading="lazy" /><span class="pais__nome">Austrália</span></li>
+              <li class="pais"><img class="pais__bandeira" src="images/flags/ae.svg" alt="" width="28" height="21" loading="lazy" /><span class="pais__nome">Dubai (EAU)</span></li>
+              <li class="pais"><img class="pais__bandeira" src="images/flags/za.svg" alt="" width="28" height="21" loading="lazy" /><span class="pais__nome">África do Sul</span></li>
+            </ul>
+          </div>
+
+          <div class="mercados__grupo reveal">
+            <h3 class="mercados__grupo-titulo">Américas</h3>
+            <ul class="mercados__lista mercados__lista--compacta">
+              <li class="pais"><img class="pais__bandeira" src="images/flags/us.svg" alt="" width="28" height="21" loading="lazy" /><span class="pais__nome">Estados Unidos</span></li>
+              <li class="pais"><img class="pais__bandeira" src="images/flags/ca.svg" alt="" width="28" height="21" loading="lazy" /><span class="pais__nome">Canadá</span></li>
+              <li class="pais"><img class="pais__bandeira" src="images/flags/mx.svg" alt="" width="28" height="21" loading="lazy" /><span class="pais__nome">México</span></li>
+              <li class="pais"><img class="pais__bandeira" src="images/flags/pa.svg" alt="" width="28" height="21" loading="lazy" /><span class="pais__nome">Panamá</span></li>
+              <li class="pais"><img class="pais__bandeira" src="images/flags/ar.svg" alt="" width="28" height="21" loading="lazy" /><span class="pais__nome">Argentina</span></li>
+              <li class="pais"><img class="pais__bandeira" src="images/flags/co.svg" alt="" width="28" height="21" loading="lazy" /><span class="pais__nome">Colômbia</span></li>
+              <li class="pais"><img class="pais__bandeira" src="images/flags/py.svg" alt="" width="28" height="21" loading="lazy" /><span class="pais__nome">Paraguai</span></li>
+            </ul>
+          </div>
+
+          <div class="mercados__grupo reveal">
+            <h3 class="mercados__grupo-titulo">Europa Ocidental</h3>
+            <ul class="mercados__lista mercados__lista--compacta">
+              <li class="pais"><img class="pais__bandeira" src="images/flags/de.svg" alt="" width="28" height="21" loading="lazy" /><span class="pais__nome">Alemanha</span></li>
+              <li class="pais"><img class="pais__bandeira" src="images/flags/be.svg" alt="" width="28" height="21" loading="lazy" /><span class="pais__nome">Bélgica</span></li>
+              <li class="pais"><img class="pais__bandeira" src="images/flags/es.svg" alt="" width="28" height="21" loading="lazy" /><span class="pais__nome">Espanha</span></li>
+              <li class="pais"><img class="pais__bandeira" src="images/flags/fr.svg" alt="" width="28" height="21" loading="lazy" /><span class="pais__nome">França</span></li>
+              <li class="pais"><img class="pais__bandeira" src="images/flags/nl.svg" alt="" width="28" height="21" loading="lazy" /><span class="pais__nome">Holanda</span></li>
+              <li class="pais"><img class="pais__bandeira" src="images/flags/ie.svg" alt="" width="28" height="21" loading="lazy" /><span class="pais__nome">Irlanda</span></li>
+              <li class="pais"><img class="pais__bandeira" src="images/flags/it.svg" alt="" width="28" height="21" loading="lazy" /><span class="pais__nome">Itália</span></li>
+              <li class="pais"><img class="pais__bandeira" src="images/flags/pt.svg" alt="" width="28" height="21" loading="lazy" /><span class="pais__nome">Portugal</span></li>
+            </ul>
+          </div>
+
+          <div class="mercados__grupo reveal">
+            <h3 class="mercados__grupo-titulo">Europa Nórdica &amp; Central</h3>
+            <ul class="mercados__lista mercados__lista--compacta">
+              <li class="pais"><img class="pais__bandeira" src="images/flags/gb.svg" alt="" width="28" height="21" loading="lazy" /><span class="pais__nome">Reino Unido</span></li>
+              <li class="pais"><img class="pais__bandeira" src="images/flags/dk.svg" alt="" width="28" height="21" loading="lazy" /><span class="pais__nome">Dinamarca</span></li>
+              <li class="pais"><img class="pais__bandeira" src="images/flags/no.svg" alt="" width="28" height="21" loading="lazy" /><span class="pais__nome">Noruega</span></li>
+              <li class="pais"><img class="pais__bandeira" src="images/flags/se.svg" alt="" width="28" height="21" loading="lazy" /><span class="pais__nome">Suécia</span></li>
+              <li class="pais"><img class="pais__bandeira" src="images/flags/pl.svg" alt="" width="28" height="21" loading="lazy" /><span class="pais__nome">Polônia</span></li>
+              <li class="pais"><img class="pais__bandeira" src="images/flags/cz.svg" alt="" width="28" height="21" loading="lazy" /><span class="pais__nome">República Tcheca</span></li>
+              <li class="pais"><img class="pais__bandeira" src="images/flags/hu.svg" alt="" width="28" height="21" loading="lazy" /><span class="pais__nome">Hungria</span></li>
+              <li class="pais"><img class="pais__bandeira" src="images/flags/hr.svg" alt="" width="28" height="21" loading="lazy" /><span class="pais__nome">Croácia</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SERVIÇOS — Importação / Exportação (alternados por abas)
+         TROCAR: para adicionar/remover um serviço, duplique ou apague um
+         <li class="servico-item"> dentro do painel certo.
+         ========================================================================== -->
+    <section class="secao servicos" id="servicos">
+      <div class="container">
+        <div class="secao__cabecalho reveal">
+          <p class="secao__eyebrow">O que fazemos</p>
+          <h2 class="secao__titulo">Serviços de importação e exportação</h2>
+          <p class="secao__subtitulo">
+            Da análise de viabilidade ao desembaraço aduaneiro — cuidamos de cada
+            etapa da sua operação internacional.
+          </p>
+        </div>
+
+        <div class="abas reveal" role="tablist" aria-label="Serviços de comércio exterior">
+          <button class="abas__botao abas__botao--ativa" id="aba-importacao" role="tab" aria-selected="true" aria-controls="painel-importacao">
+            Importação
+          </button>
+          <button class="abas__botao" id="aba-exportacao" role="tab" aria-selected="false" aria-controls="painel-exportacao" tabindex="-1">
+            Exportação
+          </button>
+        </div>
+
+        <div class="painel-servicos" id="painel-importacao" role="tabpanel" aria-labelledby="aba-importacao">
+          <ul class="servicos__lista">
+            <li class="servico-item"><span class="servico-item__icone" aria-hidden="true">✓</span>Desenvolvimento de produtos e fornecedores</li>
+            <li class="servico-item"><span class="servico-item__icone" aria-hidden="true">✓</span>Análise comercial de viabilidade</li>
+            <li class="servico-item"><span class="servico-item__icone" aria-hidden="true">✓</span>Planilha de custos estimados de importação</li>
+            <li class="servico-item"><span class="servico-item__icone" aria-hidden="true">✓</span>Análise documental</li>
+            <li class="servico-item"><span class="servico-item__icone" aria-hidden="true">✓</span>Preparação de desembaraço/despacho aduaneiro</li>
+            <li class="servico-item"><span class="servico-item__icone" aria-hidden="true">✓</span>Classificação tarifária (NCM)</li>
+            <li class="servico-item"><span class="servico-item__icone" aria-hidden="true">✓</span>Soluções cambiais junto ao Bacen</li>
+            <li class="servico-item"><span class="servico-item__icone" aria-hidden="true">✓</span>Benefícios fiscais (ICMS, ZFM)</li>
+            <li class="servico-item"><span class="servico-item__icone" aria-hidden="true">✓</span>Padronização de embalagens</li>
+            <li class="servico-item"><span class="servico-item__icone" aria-hidden="true">✓</span>Projetos especiais e créditos tributários</li>
+          </ul>
+        </div>
+
+        <div class="painel-servicos" id="painel-exportacao" role="tabpanel" aria-labelledby="aba-exportacao" hidden>
+          <ul class="servicos__lista">
+            <li class="servico-item"><span class="servico-item__icone" aria-hidden="true">✓</span>Desenvolvimento de novos mercados e clientes</li>
+            <li class="servico-item"><span class="servico-item__icone" aria-hidden="true">✓</span>Projetos e parcerias comerciais/industriais</li>
+            <li class="servico-item"><span class="servico-item__icone" aria-hidden="true">✓</span>Apresentação de produtos</li>
+            <li class="servico-item"><span class="servico-item__icone" aria-hidden="true">✓</span>Formação de custo de exportação</li>
+            <li class="servico-item"><span class="servico-item__icone" aria-hidden="true">✓</span>Classificação tarifária</li>
+            <li class="servico-item"><span class="servico-item__icone" aria-hidden="true">✓</span>Desembaraço aduaneiro</li>
+            <li class="servico-item"><span class="servico-item__icone" aria-hidden="true">✓</span>Laudos técnicos</li>
+            <li class="servico-item"><span class="servico-item__icone" aria-hidden="true">✓</span>Benefícios fiscais para exportação</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         LOGÍSTICA
+         ========================================================================== -->
+    <section class="secao secao--alt logistica" id="logistica">
+      <div class="container">
+        <div class="secao__cabecalho reveal">
+          <p class="secao__eyebrow">Da origem ao destino final</p>
+          <h2 class="secao__titulo">Logística internacional e nacional</h2>
+          <p class="secao__subtitulo">
+            Coordenamos o transporte internacional e a distribuição interna,
+            reduzindo o custo logístico da sua operação de ponta a ponta.
+          </p>
+        </div>
+
+        <div class="logistica__grade">
+          <article class="cartao-modal reveal">
+            <span class="cartao-modal__icone" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 3.5c.7 0 1.3.9 1.3 2.9v4.3l6.7 4v1.6l-6.7-2.1v3.6l1.7 1.3v1.3L12 19.4l-2.9.9v-1.3l1.7-1.3v-3.6L4 19.6V18l6.7-4V6.4C10.7 4.4 11.3 3.5 12 3.5Z" />
+              </svg>
+            </span>
+            <h3>Aéreo</h3>
+            <p>Transporte rápido para cargas urgentes ou de alto valor agregado.</p>
+          </article>
+          <article class="cartao-modal reveal">
+            <span class="cartao-modal__icone" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 16.5h18l-2.1 4a1.8 1.8 0 0 1-1.6 1H6.7a1.8 1.8 0 0 1-1.6-1L3 16.5Z" />
+                <path d="M6.3 16.5v-5.2a.8.8 0 0 1 .8-.8h3v6" />
+                <path d="M11.6 16.5V7.3a.8.8 0 0 1 .8-.8h1.7a.8.8 0 0 1 .8.8v9.2" />
+                <path d="M16.4 16.5v-3.7a.8.8 0 0 1 .8-.8h1.6a.8.8 0 0 1 .8.8v3.7" />
+              </svg>
+            </span>
+            <h3>Marítimo</h3>
+            <p>A solução de melhor custo-benefício para grandes volumes.</p>
+          </article>
+          <article class="cartao-modal reveal">
+            <span class="cartao-modal__icone" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2.5" y="7.5" width="11" height="8.5" rx="1" />
+                <path d="M13.5 10h3.4l3.1 3.1v2.9h-6.5V10Z" />
+                <circle cx="7" cy="18" r="1.6" />
+                <circle cx="16.5" cy="18" r="1.6" />
+              </svg>
+            </span>
+            <h3>Rodoviário</h3>
+            <p>Flexibilidade porta a porta, integrando fronteiras terrestres.</p>
+          </article>
+          <article class="cartao-modal reveal">
+            <span class="cartao-modal__icone" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="6" y="3.5" width="12" height="12" rx="2.5" />
+                <path d="M6 11.5h12" />
+                <path d="M9 3.5v8M15 3.5v8" />
+                <path d="M7.5 19.5 5.5 22M16.5 19.5l2 2.5" />
+                <path d="M6 15.5h12l1 4.5H5l1-4.5Z" />
+              </svg>
+            </span>
+            <h3>Ferroviário</h3>
+            <p>Alternativa de baixo custo para rotas e volumes específicos.</p>
+          </article>
+        </div>
+
+        <p class="logistica__nota reveal">
+          Cuidamos também do <strong>transporte interno</strong>, com entrega direta em
+          fábrica, centro de distribuição, armazém ou depósito — reduzindo o custo
+          logístico da sua operação até o destino final.
+        </p>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         OUTSOURCING — Administração completa de comércio exterior
+         Faixa de destaque em navy escuro, contrastando com o resto da página.
+         ========================================================================== -->
+    <section class="outsourcing" id="outsourcing">
+      <div class="container outsourcing__grade">
+        <div class="reveal">
+          <p class="secao__eyebrow secao__eyebrow--claro">Outsourcing em comércio exterior</p>
+          <h2 class="outsourcing__titulo">
+            Administração completa das suas operações internacionais
+          </h2>
+          <p class="outsourcing__texto">
+            Terceirize toda a sua área de comércio exterior com uma equipe
+            especializada cuidando de cada etapa do processo — da negociação
+            internacional ao desembaraço aduaneiro.
+          </p>
+
+          <ul class="outsourcing__lista">
+            <li>Indicado para empresas sem expertise própria em comércio exterior</li>
+            <li>Ideal também para grandes empresas que querem reduzir custo operacional</li>
+            <li>Equipe especializada dedicada a toda a operação, do início ao fim</li>
+            <li>Redução de riscos, prazos e retrabalho em cada etapa do processo</li>
+          </ul>
+
+          <a
+            href="https://wa.me/5592982460567?text=Ol%C3%A1!%20Tenho%20interesse%20no%20outsourcing%20completo%20de%20com%C3%A9rcio%20exterior%20da%20DOC%20International%20Business."
+            target="_blank"
+            rel="noopener"
+            class="botao botao--dourado botao--grande"
+          >
+            Quero terceirizar meu comércio exterior
+          </a>
+        </div>
+
+        <div class="outsourcing__selo reveal">
+          <div class="anel-estatistica">
+            <strong>100%</strong>
+            <span>Gestão<br />especializada</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         CONTATO
+         TROCAR: dados já preenchidos com as informações reais do diretor
+         comercial. Atualize apenas se o contato responsável mudar.
+         ========================================================================== -->
+    <section class="secao contato" id="contato">
+      <div class="container secao__grade contato__grade">
+        <div class="contato__info reveal">
+          <p class="secao__eyebrow">Fale conosco</p>
+          <h2 class="secao__titulo">Vamos estruturar sua operação internacional</h2>
+          <p>
+            Fale diretamente com o nosso diretor comercial e descubra como levar sua
+            empresa aos principais mercados do mundo.
+          </p>
+
+          <div class="contato__cartao-responsavel">
+            <div class="contato__avatar" aria-hidden="true">DC</div>
+            <div>
+              <strong>Dirley Cardoso</strong>
+              <span>Commercial Director</span>
+            </div>
+          </div>
+
+          <ul class="contato__lista">
+            <li>
+              <svg class="icone" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path
+                  d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm5.7 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.1.1-1.8-.1-.4-.1-.9-.3-1.6-.6-2.8-1.2-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8 0-1.3.7-2 1-2.2.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.4.2.5.7 1.8.8 1.9.1.2.1.3 0 .5-.1.2-.1.3-.3.5l-.4.5c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.3.1.5.1.6-.1.2-.2.7-.8.9-1.1.2-.3.4-.2.6-.1.2.1 1.5.7 1.8.8.3.1.5.2.5.3.1.2.1.6-.1 1.2Z"
+                />
+              </svg>
+              <a href="https://wa.me/5592982460567">+55 (92) 98246-0567 — WhatsApp, WeChat &amp; Telegram</a>
+            </li>
+            <li>
+              <svg class="icone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                <rect x="3" y="5" width="18" height="14" rx="2" />
+                <path d="m3.5 6 8.5 6.5L20.5 6" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+              <a href="mailto:dirley.cardoso@docworldbusiness.com">dirley.cardoso@docworldbusiness.com</a>
+            </li>
+            <li>
+              <svg class="icone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                <path d="M3 21h18M6 21V9l6-4 6 4v12M10 21v-6h4v6" stroke-linejoin="round" stroke-linecap="round" />
+              </svg>
+              <span>Edifício Rio Madeira</span>
+            </li>
+            <li>
+              <svg class="icone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                <path d="M12 21s-7-6.1-7-11a7 7 0 0 1 14 0c0 4.9-7 11-7 11Z" stroke-linejoin="round" />
+                <circle cx="12" cy="10" r="2.5" />
+              </svg>
+              <span>Rua Costa Azevedo, 9 — Sala 901 — Centro, Manaus/AM</span>
+            </li>
+          </ul>
+
+          <a
+            href="https://wa.me/5592982460567?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20DOC%20International%20Business%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es."
+            target="_blank"
+            rel="noopener"
+            class="botao botao--primario"
+          >
+            Chamar no WhatsApp
+          </a>
+        </div>
+
+        <div class="contato__mapa reveal">
+          <!-- TROCAR: se preferir, substitua pela URL oficial gerada em
+               Google Maps > Compartilhar > Incorporar um mapa. -->
+          <iframe
+            src="https://www.google.com/maps?q=Rua%20Costa%20Azevedo%2C%209%20-%20Centro%2C%20Manaus%20-%20AM&output=embed"
+            title="Localização — Edifício Rio Madeira, Manaus/AM"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       RODAPÉ
+       TROCAR: links de redes sociais quando existirem perfis oficiais.
+       ========================================================================== -->
+  <footer class="rodape">
+    <div class="container rodape__grade">
+      <div class="rodape__coluna rodape__coluna--marca">
+        <div class="rodape__marca">
+          <img src="images/logo-marca-branca.png" alt="" width="26" height="30" />
+          <span>DOC International Business</span>
+        </div>
+        <p>
+          Consultoria e assessoria em comércio exterior — conectando empresas
+          brasileiras a mais de 30 mercados internacionais.
+        </p>
+        <div class="rodape__redes">
+          <!-- TROCAR: coloque os links reais das redes/perfis quando existirem -->
+          <a href="https://www.linkedin.com/" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+              <rect x="3" y="3" width="18" height="18" rx="3" />
+              <path d="M8 10.5V17M8 7.5v.01M12.5 17v-4a2 2 0 1 1 4 0v4M12.5 10.5V17" stroke-linecap="round" />
+            </svg>
+          </a>
+          <a href="mailto:dirley.cardoso@docworldbusiness.com" aria-label="E-mail">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+              <rect x="3" y="5" width="18" height="14" rx="2" />
+              <path d="m3.5 6 8.5 6.5L20.5 6" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </a>
+          <a href="https://wa.me/5592982460567" target="_blank" rel="noopener" aria-label="WhatsApp">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path
+                d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm5.7 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.1.1-1.8-.1-.4-.1-.9-.3-1.6-.6-2.8-1.2-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8 0-1.3.7-2 1-2.2.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.4.2.5.7 1.8.8 1.9.1.2.1.3 0 .5-.1.2-.1.3-.3.5l-.4.5c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.3.1.5.1.6-.1.2-.2.7-.8.9-1.1.2-.3.4-.2.6-.1.2.1 1.5.7 1.8.8.3.1.5.2.5.3.1.2.1.6-.1 1.2Z"
+              />
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="rodape__coluna">
+        <h3>Navegação</h3>
+        <ul>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#mercados">Mercados de atuação</a></li>
+          <li><a href="#servicos">Serviços</a></li>
+          <li><a href="#logistica">Logística</a></li>
+          <li><a href="#outsourcing">Outsourcing</a></li>
+        </ul>
+      </div>
+
+      <div class="rodape__coluna">
+        <h3>Contato</h3>
+        <ul>
+          <li><a href="https://wa.me/5592982460567">+55 (92) 98246-0567</a></li>
+          <li><a href="mailto:dirley.cardoso@docworldbusiness.com">dirley.cardoso@docworldbusiness.com</a></li>
+          <li><span>Rua Costa Azevedo, 9 — Centro, Manaus/AM</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="rodape__base">
+      <div class="container rodape__base-conteudo">
+        <p class="rodape__copyright">
+          &copy; <span id="anoAtual"></span> DOC International Business Ltda. Todos os direitos reservados.
+        </p>
+        <p class="rodape__creditos">
+          Desenvolvido por <a href="https://www.dcodes.com.br/" target="_blank" rel="noopener">DCodes</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Botão flutuante de WhatsApp — visível em toda a navegação -->
+  <a
+    href="https://wa.me/5592982460567?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20DOC%20International%20Business%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es."
+    target="_blank"
+    rel="noopener"
+    class="whatsapp-flutuante"
+    aria-label="Falar no WhatsApp"
+  >
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path
+        d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm5.7 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.1.1-1.8-.1-.4-.1-.9-.3-1.6-.6-2.8-1.2-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8 0-1.3.7-2 1-2.2.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.4.2.5.7 1.8.8 1.9.1.2.1.3 0 .5-.1.2-.1.3-.3.5l-.4.5c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.3.1.5.1.6-.1.2-.2.7-.8.9-1.1.2-.3.4-.2.6-.1.2.1 1.5.7 1.8.8.3.1.5.2.5.3.1.2.1.6-.1 1.2Z"
+      />
+    </svg>
+  </a>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
