@@ -46,7 +46,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Montserrat:wght@600;700;800&display=swap"
     rel="stylesheet"
   />
 
@@ -319,13 +319,16 @@
 
       <div class="container">
         <div class="secao__cabecalho reveal">
-          <p class="secao__eyebrow">Presença global</p>
-          <h2 class="secao__titulo">Mercados de atuação</h2>
-          <p class="secao__subtitulo">
-            Atuação direta em mais de 30 mercados, em cinco continentes — do
-            desenvolvimento de fornecedores na Ásia à abertura de clientes na Europa
-            e nas Américas.
-          </p>
+          <span class="secao__indice" aria-hidden="true">02</span>
+          <div>
+            <p class="secao__eyebrow">Presença global</p>
+            <h2 class="secao__titulo">Mercados de atuação</h2>
+            <p class="secao__subtitulo">
+              Atuação direta em mais de 30 mercados, em cinco continentes — do
+              desenvolvimento de fornecedores na Ásia à abertura de clientes na Europa
+              e nas Américas.
+            </p>
+          </div>
         </div>
 
         <!-- 4 grupos com contagem equilibrada (7/7/8/8 países) de propósito —
@@ -398,12 +401,15 @@
     <section class="secao servicos" id="servicos">
       <div class="container">
         <div class="secao__cabecalho reveal">
-          <p class="secao__eyebrow">O que fazemos</p>
-          <h2 class="secao__titulo">Serviços de importação e exportação</h2>
-          <p class="secao__subtitulo">
-            Da análise de viabilidade ao desembaraço aduaneiro — cuidamos de cada
-            etapa da sua operação internacional.
-          </p>
+          <span class="secao__indice" aria-hidden="true">03</span>
+          <div>
+            <p class="secao__eyebrow">O que fazemos</p>
+            <h2 class="secao__titulo">Serviços de importação e exportação</h2>
+            <p class="secao__subtitulo">
+              Da análise de viabilidade ao desembaraço aduaneiro — cuidamos de cada
+              etapa da sua operação internacional.
+            </p>
+          </div>
         </div>
 
         <div class="abas reveal" role="tablist" aria-label="Serviços de comércio exterior">
@@ -451,17 +457,23 @@
     <section class="secao secao--alt logistica" id="logistica">
       <div class="container">
         <div class="secao__cabecalho reveal">
-          <p class="secao__eyebrow">Da origem ao destino final</p>
-          <h2 class="secao__titulo">Logística internacional e nacional</h2>
-          <p class="secao__subtitulo">
-            Coordenamos o transporte internacional e a distribuição interna,
-            reduzindo o custo logístico da sua operação de ponta a ponta.
-          </p>
+          <span class="secao__indice" aria-hidden="true">04</span>
+          <div>
+            <p class="secao__eyebrow">Da origem ao destino final</p>
+            <h2 class="secao__titulo">Logística internacional e nacional</h2>
+            <p class="secao__subtitulo">
+              Coordenamos o transporte internacional e a distribuição interna,
+              reduzindo o custo logístico da sua operação de ponta a ponta.
+            </p>
+          </div>
         </div>
 
-        <div class="logistica__grade">
-          <article class="cartao-modal reveal">
-            <span class="cartao-modal__icone" aria-hidden="true">
+        <!-- Rota/linha do tempo em vez de grid de cards uniforme (repetiria o
+             mesmo padrão de "cartao-modal" já usado, sem variar a composição
+             dentro do site). Zigue-zague no desktop, linha vertical no mobile. -->
+        <div class="logistica__rota">
+          <article class="logistica__parada reveal">
+            <span class="logistica__parada-icone" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M12 3.5c.7 0 1.3.9 1.3 2.9v4.3l6.7 4v1.6l-6.7-2.1v3.6l1.7 1.3v1.3L12 19.4l-2.9.9v-1.3l1.7-1.3v-3.6L4 19.6V18l6.7-4V6.4C10.7 4.4 11.3 3.5 12 3.5Z" />
               </svg>
@@ -469,8 +481,8 @@
             <h3>Aéreo</h3>
             <p>Transporte rápido para cargas urgentes ou de alto valor agregado.</p>
           </article>
-          <article class="cartao-modal reveal">
-            <span class="cartao-modal__icone" aria-hidden="true">
+          <article class="logistica__parada reveal">
+            <span class="logistica__parada-icone" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M3 16.5h18l-2.1 4a1.8 1.8 0 0 1-1.6 1H6.7a1.8 1.8 0 0 1-1.6-1L3 16.5Z" />
                 <path d="M6.3 16.5v-5.2a.8.8 0 0 1 .8-.8h3v6" />
@@ -481,8 +493,8 @@
             <h3>Marítimo</h3>
             <p>A solução de melhor custo-benefício para grandes volumes.</p>
           </article>
-          <article class="cartao-modal reveal">
-            <span class="cartao-modal__icone" aria-hidden="true">
+          <article class="logistica__parada reveal">
+            <span class="logistica__parada-icone" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
                 <rect x="2.5" y="7.5" width="11" height="8.5" rx="1" />
                 <path d="M13.5 10h3.4l3.1 3.1v2.9h-6.5V10Z" />
@@ -493,8 +505,8 @@
             <h3>Rodoviário</h3>
             <p>Flexibilidade porta a porta, integrando fronteiras terrestres.</p>
           </article>
-          <article class="cartao-modal reveal">
-            <span class="cartao-modal__icone" aria-hidden="true">
+          <article class="logistica__parada reveal">
+            <span class="logistica__parada-icone" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
                 <rect x="6" y="3.5" width="12" height="12" rx="2.5" />
                 <path d="M6 11.5h12" />

@@ -37,7 +37,7 @@
   /* Fontes — troque o nome aqui E no link do Google Fonts, no <head> do
      index.html, se quiser usar outras fontes. */
   --fonte-titulo: "Montserrat", "Segoe UI", Arial, sans-serif;
-  --fonte-corpo: "Inter", "Segoe UI", Arial, sans-serif;
+  --fonte-corpo: "Manrope", "Segoe UI", Arial, sans-serif;
 
   /* Espaçamento, sombra e cantos — cantos discretos de propósito (tom
      sério/corporativo, não "fofo") */
@@ -233,10 +233,32 @@ h3 {
   max-width: 52ch;
 }
 
+/* Cabeçalho de seção assimétrico — índice numérico grande (contorno) ao
+   lado do texto alinhado à esquerda, no lugar do "eyebrow + título +
+   subtítulo tudo centralizado" (padrão comum a vários sites já feitos). */
 .secao__cabecalho {
-  text-align: center;
-  max-width: 680px;
-  margin: 0 auto 3.25rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  text-align: left;
+  max-width: 760px;
+  margin: 0 0 3.25rem;
+}
+
+.secao__indice {
+  font-family: var(--fonte-titulo);
+  font-weight: 800;
+  font-size: clamp(2.75rem, 8vw, 4.5rem);
+  line-height: 0.85;
+  flex-shrink: 0;
+  /* Preenchimento sólido e bem clarinho, sem contorno (text-stroke) — em
+     alguns dígitos (ex: "4") o traçado da fonte se autointercepta, e um
+     contorno "vazado" (só stroke) desenha essa interseção como um "X"
+     confuso. Preenchimento sólido não tem esse problema (o navegador
+     resolve sobreposição de forma correta ao preencher, só não ao contornar). */
+  color: var(--cor-dourado);
+  opacity: 0.3;
+  user-select: none;
 }
 
 .secao__cabecalho .secao__eyebrow {
@@ -248,7 +270,7 @@ h3 {
 }
 
 .secao__cabecalho .secao__subtitulo {
-  margin: 0 auto;
+  margin: 0;
 }
 
 .secao__grade {
@@ -944,48 +966,68 @@ h3 {
 /* ==========================================================================
    10. LOGÍSTICA
    ========================================================================== */
-.logistica__grade {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1.5rem;
-  margin-bottom: 2.5rem;
-}
-
-.cartao-modal {
-  background: var(--cor-branco);
-  border-radius: var(--raio-borda);
-  padding: 2rem 1.5rem;
-  text-align: center;
-  box-shadow: var(--sombra-suave);
-  transition: transform var(--transicao), box-shadow var(--transicao);
-}
-
-.cartao-modal:hover {
-  transform: translateY(-6px);
-  box-shadow: var(--sombra-media);
-}
-
-.cartao-modal__icone {
+/* Rota/linha do tempo (mobile: linha vertical à esquerda; desktop: linha
+   horizontal com zigue-zague, ver breakpoint ≥1024px) — de propósito
+   diferente do grid de cards uniforme usado em Mercados/Serviços, pra não
+   repetir a mesma composição em toda seção do site. */
+.logistica__rota {
+  position: relative;
   display: flex;
+  flex-direction: column;
+  gap: 2.25rem;
+  margin-bottom: 2.5rem;
+  padding-left: 2rem;
+}
+
+.logistica__rota::before {
+  content: "";
+  position: absolute;
+  top: 6px;
+  bottom: 6px;
+  left: 27px;
+  width: 2px;
+  background-image: linear-gradient(var(--cor-borda) 60%, transparent 40%);
+  background-size: 2px 12px;
+  background-repeat: repeat-y;
+}
+
+.logistica__parada {
+  position: relative;
+  padding-left: 3.5rem;
+}
+
+.logistica__parada-icone {
+  position: absolute;
+  top: -8px;
+  left: -2rem;
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
   justify-content: center;
+  background: var(--cor-branco);
+  border: 2px solid var(--cor-dourado);
+  border-radius: 50%;
   color: var(--cor-primaria);
-  margin-bottom: 1.1rem;
+  box-shadow: var(--sombra-suave);
+  z-index: 1;
 }
 
-.cartao-modal__icone svg {
-  width: 40px;
-  height: 40px;
+.logistica__parada-icone svg {
+  width: 24px;
+  height: 24px;
 }
 
-.cartao-modal h3 {
+.logistica__parada h3 {
   font-size: 1.05rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.4rem;
   color: var(--cor-primaria-escura);
 }
 
-.cartao-modal p {
+.logistica__parada p {
   color: var(--cor-texto-claro);
   font-size: 0.9rem;
+  max-width: 42ch;
 }
 
 .logistica__nota {
@@ -1404,10 +1446,6 @@ h3 {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .logistica__grade {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
   .contato__cartao-responsavel {
     max-width: 420px;
   }
@@ -1467,8 +1505,40 @@ h3 {
     display: block;
   }
 
-  .logistica__grade {
-    grid-template-columns: repeat(4, 1fr);
+  .logistica__rota {
+    flex-direction: row;
+    align-items: flex-start;
+    padding-left: 0;
+    gap: 1.5rem;
+  }
+
+  .logistica__rota::before {
+    top: 22px;
+    bottom: auto;
+    left: 12.5%;
+    right: 12.5%;
+    width: auto;
+    height: 2px;
+    background-image: linear-gradient(90deg, var(--cor-borda) 60%, transparent 40%);
+    background-size: 12px 2px;
+    background-repeat: repeat-x;
+  }
+
+  .logistica__parada {
+    flex: 1;
+    padding-left: 0;
+    padding-top: 3.75rem;
+    text-align: center;
+  }
+
+  .logistica__parada-icone {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .logistica__parada p {
+    margin: 0 auto;
   }
 
   .outsourcing__grade {
