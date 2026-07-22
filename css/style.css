@@ -69,7 +69,7 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 84px;
+  scroll-padding-top: 118px;
 }
 
 html,
@@ -379,21 +379,69 @@ h3 {
 
 /* ==========================================================================
    5. CABEÇALHO / NAVEGAÇÃO
+   Duas camadas fixas (barra utilitária + menu escuro) — de propósito
+   diferente do cabeçalho branco de uma camada só usado em outros sites já
+   feitos, e mais coerente com o resto do site (agora bem mais escuro).
    ========================================================================== */
-.cabecalho {
+.barra-utilitaria {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
+  z-index: 101;
+  background: var(--cor-noturna);
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.78rem;
+  padding: 0.55rem 0;
+}
+
+.barra-utilitaria__conteudo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.barra-utilitaria__contato {
+  display: flex;
+  align-items: center;
+  gap: 1.1rem;
+  min-width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.barra-utilitaria__contato a {
+  transition: color var(--transicao);
+}
+
+.barra-utilitaria__contato a:hover {
+  color: var(--cor-dourado);
+}
+
+/* No mobile, só o telefone cabe numa linha só sem quebrar feio */
+.barra-utilitaria__contato a:last-child {
+  display: none;
+}
+
+.barra-utilitaria__selo {
+  display: none;
+}
+
+.cabecalho {
+  position: fixed;
+  top: 38px;
+  left: 0;
+  right: 0;
   z-index: 100;
-  background: rgba(255, 255, 255, 0.94);
+  background: rgba(10, 26, 64, 0.96);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  transition: box-shadow var(--transicao), background-color var(--transicao);
+  transition: box-shadow var(--transicao), background-color var(--transicao), top var(--transicao);
 }
 
 .cabecalho--rolado {
-  box-shadow: 0 2px 20px rgba(10, 26, 64, 0.1);
+  box-shadow: 0 8px 30px rgba(2, 6, 16, 0.35);
 }
 
 .cabecalho__conteudo {
@@ -428,14 +476,14 @@ h3 {
   font-weight: 800;
   font-size: 1.15rem;
   letter-spacing: 0.03em;
-  color: var(--cor-primaria-escura);
+  color: var(--cor-branco);
   white-space: nowrap;
 }
 
 .marca__texto em {
   font-style: normal;
   font-size: 0.68rem;
-  color: var(--cor-texto-claro);
+  color: rgba(255, 255, 255, 0.55);
   text-transform: uppercase;
   letter-spacing: 0.08em;
   white-space: nowrap;
@@ -445,11 +493,11 @@ h3 {
 
 .navegacao {
   position: fixed;
-  top: 76px;
+  top: 114px;
   left: 0;
   right: 0;
-  background: var(--cor-branco);
-  border-bottom: 1px solid var(--cor-borda);
+  background: var(--cor-primaria-escura);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   padding: 1.5rem 1.25rem 2rem;
   display: flex;
   flex-direction: column;
@@ -458,7 +506,7 @@ h3 {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-  max-height: calc(100vh - 76px);
+  max-height: calc(100vh - 114px);
   overflow-y: auto;
   transition: opacity var(--transicao), transform var(--transicao), visibility var(--transicao);
 }
@@ -480,13 +528,13 @@ h3 {
 .navegacao__link {
   font-weight: 500;
   font-size: 1.02rem;
-  color: var(--cor-texto);
+  color: rgba(255, 255, 255, 0.85);
   transition: color var(--transicao);
 }
 
 .navegacao__link:hover,
 .navegacao__link--ativo {
-  color: var(--cor-primaria);
+  color: var(--cor-dourado);
 }
 
 .navegacao__cta {
@@ -510,7 +558,7 @@ h3 {
   display: block;
   height: 2px;
   width: 100%;
-  background: var(--cor-primaria-escura);
+  background: var(--cor-branco);
   border-radius: 2px;
   transition: transform var(--transicao), opacity var(--transicao);
 }
@@ -535,7 +583,7 @@ h3 {
   min-height: 92vh;
   display: flex;
   align-items: center;
-  padding-top: 76px;
+  padding-top: 114px;
   /* Gradiente quase-preto no topo (céu noturno) esquentando pro azul-marinho
      da marca perto do horizonte — mais cinematográfico que um azul liso. */
   background: linear-gradient(180deg, var(--cor-noturna) 0%, var(--cor-noturna-clara) 45%, var(--cor-primaria-escura) 78%, var(--cor-primaria) 100%);
@@ -1475,6 +1523,14 @@ h3 {
 @media (min-width: 768px) {
   .secao {
     padding: 6rem 0;
+  }
+
+  .barra-utilitaria__contato a:last-child {
+    display: inline;
+  }
+
+  .barra-utilitaria__selo {
+    display: block;
   }
 
   .hero {
