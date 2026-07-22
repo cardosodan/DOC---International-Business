@@ -1295,58 +1295,111 @@ h3 {
 }
 
 /* ==========================================================================
-   13. RODAPÉ — 3 colunas (marca / navegação / contato) + barra inferior.
-   De propósito bem diferente do rodapé de coluna única centralizada de
-   outros sites já feitos — layout multi-coluna, mais "corporativo".
+   13. RODAPÉ — composição editorial: faixa de CTA + wordmark gigante + linha
+   fina de links + barra final. De propósito bem diferente do formato
+   "3 colunas iguais" (marca/nav/contato) comum em outros sites já feitos —
+   aqui a marca é o protagonista tipográfico, não mais uma coluna entre
+   outras.
    ========================================================================== */
 .rodape {
-  background: var(--cor-primaria-escura);
-  color: rgba(255, 255, 255, 0.75);
+  background: var(--cor-noturna);
+  color: rgba(255, 255, 255, 0.7);
+  overflow: hidden;
 }
 
-.rodape__grade {
-  display: grid;
-  gap: 2.5rem;
-  padding: 4rem 0 3rem;
+/* Faixa de CTA — repete o convite de contato uma última vez, com fundo
+   levemente diferente do resto do rodapé pra marcar essa faixa como um
+   bloco à parte. */
+.rodape__cta {
+  background: linear-gradient(135deg, var(--cor-primaria-escura), var(--cor-grafite));
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-.rodape__coluna h3 {
-  color: var(--cor-branco);
-  font-size: 0.85rem;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  margin-bottom: 1.25rem;
-}
-
-.rodape__coluna ul {
+.rodape__cta-conteudo {
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
+  align-items: flex-start;
+  gap: 1.5rem;
+  padding: 3rem 0;
 }
 
-.rodape__coluna a {
+.rodape__cta-eyebrow {
+  font-family: var(--fonte-titulo);
+  font-weight: 700;
+  color: var(--cor-dourado);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.78rem;
+  margin-bottom: 0.5rem;
+}
+
+.rodape__cta-titulo {
+  color: var(--cor-branco);
+  font-size: clamp(1.35rem, 3.2vw, 2rem);
+  max-width: 26ch;
+}
+
+/* Wordmark gigante — a "marca como tipografia", no lugar de um logo
+   pequeno numa coluna. */
+.rodape__identidade {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  padding: 3rem 0 2rem;
+}
+
+.rodape__identidade-icone {
+  width: clamp(36px, 6vw, 64px);
+  height: auto;
+  flex-shrink: 0;
+  opacity: 0.9;
+}
+
+.rodape__wordmark-bloco {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.rodape__wordmark {
+  font-family: var(--fonte-titulo);
+  font-weight: 800;
+  color: var(--cor-branco);
+  font-size: clamp(3rem, 13vw, 8rem);
+  line-height: 0.9;
+  letter-spacing: -0.01em;
+}
+
+.rodape__wordmark-sub {
+  font-size: clamp(0.7rem, 1.6vw, 0.95rem);
+  color: rgba(255, 255, 255, 0.55);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  margin-top: 0.4rem;
+}
+
+.rodape__links {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 1.5rem 0 2.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.rodape__nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+}
+
+.rodape__nav a {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.75);
   transition: color var(--transicao);
 }
 
-.rodape__coluna a:hover {
+.rodape__nav a:hover {
   color: var(--cor-dourado);
-}
-
-.rodape__coluna--marca p {
-  font-size: 0.9rem;
-  line-height: 1.6;
-  margin: 1.1rem 0 1.5rem;
-  max-width: 34ch;
-}
-
-.rodape__marca {
-  display: flex;
-  align-items: center;
-  gap: 0.65rem;
-  font-family: var(--fonte-titulo);
-  font-weight: 700;
-  color: var(--cor-branco);
-  font-size: 1rem;
 }
 
 .rodape__redes {
@@ -1362,6 +1415,7 @@ h3 {
   display: flex;
   align-items: center;
   justify-content: center;
+  color: rgba(255, 255, 255, 0.85);
   transition: background var(--transicao), border-color var(--transicao);
 }
 
@@ -1373,17 +1427,29 @@ h3 {
 .rodape__redes a:hover {
   background: var(--cor-dourado);
   border-color: var(--cor-dourado);
+  color: var(--cor-primaria-escura);
 }
 
 .rodape__base {
-  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .rodape__base-conteudo {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0.6rem;
   padding: 1.5rem 0;
+}
+
+.rodape__contato-condensado {
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.rodape__base-linha2 {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
 }
 
 .rodape__copyright {
@@ -1610,13 +1676,32 @@ h3 {
     height: auto;
   }
 
-  .rodape__grade {
-    grid-template-columns: 1.3fr 1fr 1fr;
+  .rodape__cta-conteudo {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+
+  .rodape__cta-titulo {
+    margin: 0;
+  }
+
+  .rodape__links {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
   }
 
   .rodape__base-conteudo {
     flex-direction: row;
+    align-items: center;
     justify-content: space-between;
+  }
+
+  .rodape__base-linha2 {
+    flex-direction: row;
+    gap: 1rem;
   }
 }
 
