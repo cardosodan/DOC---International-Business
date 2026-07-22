@@ -541,18 +541,71 @@ h3 {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  gap: 1rem;
-  margin-bottom: 3rem;
+  gap: 1.25rem;
+  margin-bottom: 2.5rem;
 }
 
 .hero__acoes .botao {
   width: 100%;
 }
 
-/* Painel gráfico do Hero — composição própria (rede de conexões + estatísticas
-   "flutuantes" em chips), no lugar de uma foto de banco de imagens ou de um
-   bloco de texto solto sobre o gradiente. */
+/* Segundo link do Hero — de propósito NÃO é um botão (só texto + seta),
+   pra não repetir o padrão "dois botões iguais lado a lado". */
+.hero__link-secundario {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  align-self: flex-start;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.92);
+  padding-bottom: 0.2rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+  transition: border-color var(--transicao), color var(--transicao), gap var(--transicao);
+}
+
+.hero__link-secundario svg {
+  width: 1.1em;
+  height: 1.1em;
+}
+
+.hero__link-secundario:hover {
+  color: var(--cor-dourado);
+  border-color: var(--cor-dourado);
+  gap: 0.75rem;
+}
+
+.hero__estatisticas {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  max-width: 480px;
+  padding-top: 1.75rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.estatistica__numero {
+  display: block;
+  font-family: var(--fonte-titulo);
+  font-weight: 800;
+  font-size: clamp(1.4rem, 4vw, 1.9rem);
+  color: var(--cor-branco);
+}
+
+.estatistica__legenda {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.68);
+  line-height: 1.35;
+}
+
+/* Painel gráfico do Hero: rotas comerciais do Brasil até 4 mercados
+   representativos (um por região), cada um com a bandeira real — ilustra
+   literalmente "conectamos o Brasil aos mercados do mundo", em vez de um
+   efeito de rede genérico sem relação clara com comércio exterior. */
 .hero__painel {
+  /* Escondido por padrão (mobile) — em telas pequenas ele só tomava espaço
+     sem ajudar; volta a aparecer ao lado do texto a partir do desktop
+     (≥1024px, junto com ".hero__grade" virando 2 colunas). */
+  display: none;
   position: relative;
   aspect-ratio: 1 / 1;
   max-width: 420px;
@@ -566,54 +619,72 @@ h3 {
   -webkit-backdrop-filter: blur(6px);
 }
 
-.hero__painel-rede {
+.hero__painel-rotas {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
 }
 
-.hero__chip {
+.hero__painel-origem {
+  position: absolute;
+  top: 78%;
+  left: 20%;
+  transform: translate(-50%, -50%);
+  background: var(--cor-dourado);
+  color: var(--cor-primaria-escura);
+  font-family: var(--fonte-titulo);
+  font-weight: 800;
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  padding: 0.5rem 0.85rem;
+  border-radius: 999px;
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.3);
+  white-space: nowrap;
+}
+
+.hero__painel-destino {
   position: absolute;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  gap: 0.1rem;
-  min-width: 84px;
-  padding: 0.7rem 1rem;
-  background: var(--cor-primaria-escura);
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  border-radius: var(--raio-borda-pequeno);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
-  text-align: center;
+  gap: 0.35rem;
+  transform: translate(-50%, -50%);
 }
 
-.hero__chip--1 {
-  top: -14px;
-  left: 20px;
+.hero__painel-destino img {
+  border-radius: 3px;
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5), 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
-.hero__chip--2 {
-  top: 38%;
-  right: -14px;
-}
-
-.hero__chip--3 {
-  bottom: -14px;
-  left: 46px;
-}
-
-.estatistica__numero {
-  font-family: var(--fonte-titulo);
-  font-weight: 800;
-  font-size: 1.4rem;
-  color: var(--cor-branco);
-}
-
-.hero__chip span {
+.hero__painel-destino span {
   font-size: 0.68rem;
-  color: rgba(255, 255, 255, 0.75);
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.85);
+  background: rgba(10, 26, 64, 0.75);
+  padding: 0.15rem 0.5rem;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.hero__painel-destino--1 {
+  top: 38%;
+  left: 50%;
+}
+
+.hero__painel-destino--2 {
+  top: 58%;
+  left: 76%;
+}
+
+.hero__painel-destino--3 {
+  top: 22%;
+  left: 28%;
+}
+
+.hero__painel-destino--4 {
+  top: 80%;
+  left: 78%;
 }
 
 /* ==========================================================================
@@ -1380,6 +1451,10 @@ h3 {
   .hero__grade {
     grid-template-columns: 1.15fr 1fr;
     gap: 2.5rem;
+  }
+
+  .hero__painel {
+    display: block;
   }
 
   .sobre__grade {
